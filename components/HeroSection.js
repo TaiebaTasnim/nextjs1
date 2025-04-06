@@ -49,8 +49,8 @@ export default function HeroSection() {
 
       {/* Text Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="mt-2 text-lg md:text-2xl">TRANSPORT & LOGISTICS</h1>
-        <p className=" text-4xl md:text-6xl font-bold">MONTRANSFERT SARL</p>
+        <h1 className="mt-2 text-lg md:text-xl mb-4">TRANSPORT & LOGISTICS</h1>
+        <p className=" text-3xl md:text-5xl font-bold">MONTRANSFERT SARL</p>
       </div>
     </div>
      </div>

@@ -21,7 +21,7 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Side */}
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold text-black">Avez-vous besoin d&apos;une voiture ?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-black">Avez-vous besoin d&apos;une voiture ?</h2>
           <h3 className="text-sm tracking-widest text-[#deba91] mt-2">
           LA MEILLEURE LOCATION DE VOITURES
           </h3>
@@ -47,9 +47,9 @@ de chaque client pour une expérience agréable et sans souci. 🚗✨
 
         {/* Right Side - Contact Form */}
         <div>
-          <h3 className="text-xl font-semibold text-black">Quick Contact:</h3>
+          <h3 className="text-xl font-semibold text-black">Contact rapide</h3>
           <div className="grid grid-cols-2 gap-4 mt-4">
-          {["email", "name", "phone", "message"].map((field, index) => (
+          {["email", "nom", "téléphone", "message"].map((field, index) => (
   <div
     key={index}
     className={`relative ${
@@ -59,7 +59,7 @@ de chaque client pour une expérience agréable et sans souci. 🚗✨
     {field === "message" ? (
       <textarea
         name={field}
-        placeholder={`Your ${field}`}
+        placeholder={`Votre ${field}`}
         value={formData[field]}
         onChange={handleChange}
         className="w-full py-2 border-b border-gray-200 focus:outline-none text-black transition-all duration-500 relative 
@@ -70,7 +70,7 @@ de chaque client pour une expérience agréable et sans souci. 🚗✨
       <input
         type={field === "email" ? "email" : "text"}
         name={field}
-        placeholder={`Your ${field}`}
+        placeholder={`Votre ${field}`}
         value={formData[field]}
         onChange={handleChange}
         className="w-full py-2 border-b border-gray-200 focus:outline-none text-black transition-all duration-500 relative 
@@ -94,7 +94,7 @@ de chaque client pour une expérience agréable et sans souci. 🚗✨
     {/* "+" by default, transforms into a circle on hover */}
     <span className="transition-all duration-500 group-hover:scale-0 text-[#deba91] text-2xl">+</span>
     <span className="absolute  opacity-0 w-0 h-0 bg-[#deba91] rounded-full transition-all duration-200 group-hover:opacity-100 group-hover:w-3 group-hover:h-3"></span>
-    <span className="text-lg">SEND</span>
+    <span className="text-lg uppercase">Envoyer</span>
   </span>
 </button>
 

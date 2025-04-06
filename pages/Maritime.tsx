@@ -2,6 +2,15 @@ import Image from "next/image";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Inconsolata} from "next/font/google";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+import {  FaFacebookSquare } from "react-icons/fa";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
 
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
@@ -10,8 +19,13 @@ export default function Maritime() {
   
   return (
 
-   <div className={`${inconsolata.className} antialiased bg-white text-black`}>
-     <Navbar />
+   <div className={`${roboto.variable} font-sans bg-white text-black`}>
+    <Head>
+<title>Maritime-Montransfert</title>
+</Head>
+     <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+         <Navbar />
+         </div>
     <div className="bg-white">
       {/* Banner Section */}
       <div className="relative w-full h-[400px]">
@@ -54,18 +68,20 @@ export default function Maritime() {
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
             <h2 className="text-5xl font-bold text-center">Transport Maritime et Groupage</h2>
             <p className="text-lg text-center">Lausanne-Dakar</p>
+            
           </div>
         </div>
       </div>
 
       {/* Contact Section */}
       <div className=" mt-6 text-center">
-        <h2 className="text-4xl  font-semibold text-black">
+        <h2 className="text-4xl  font-semibold text-black mb-3">
           Montransfert Sàrl, 1066 Lausanne
         </h2>
-        <h2 className="text-lg  uppercase font-semibold text-[#deba91] pb-10">
+        <h2 className="text-lg  uppercase font-semibold text-[#deba91] pb-2">
           Contactez-nous pour avoir plus de renseignements
         </h2>
+        <a href="https://www.facebook.com/people/Transport-Maritime-et-Groupage-pour-le-S%C3%A9n%C3%A9gal-depuis-la-Suisse/61560718967371/" target="blank"><FaFacebookSquare className=" max-w-7xl mx-auto w-[90%] text-blue-900 text-4xl "></FaFacebookSquare></a>
       </div>
 
       {/* <hr className="border border-[#deba91]" /> */}

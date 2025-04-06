@@ -25,7 +25,7 @@ const SafetyQuality = () => {
         {/* Left Content */}
         <div className="lg:w-1/2">
           <h2 className="text-4xl font-semibold text-black">Sécurité & Qualité</h2>
-          <p className="text-sm tracking-widest text-gray-500 mt-1">QUE LE MEILLEUR<span role="img" aria-label="emoji">😊</span></p>
+          <p className="text-sm tracking-widest text-[#deba91] mt-1">QUE LE MEILLEUR<span role="img" aria-label="emoji">😊</span></p>
           <p className="text-lg text-gray-700 mt-4">
             At Monttransfert Sàrl, Nous offrons des services fiables avec un haut niveau de sécurité et de qualité. Nous garantissons:
           </p>

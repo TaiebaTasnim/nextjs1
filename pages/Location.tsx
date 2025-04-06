@@ -2,13 +2,27 @@ import Image from "next/image";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Inconsolata} from "next/font/google";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
 
 export default function Rental() {
   return (
-   <div className={`${inconsolata.className} antialiased bg-white text-black`}>
-      <Navbar />
+   <div className={`${roboto.variable} font-sans bg-white text-black`}>
+    <Head>
+<title>Nous louons-Montransfert</title>
+</Head>
+    <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+    <Navbar />
+    </div>
+      
        <div className="bg-white">
       {/* Banner Section */}
       <div className="relative w-full h-[400px]">

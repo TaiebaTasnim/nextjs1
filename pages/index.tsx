@@ -9,7 +9,14 @@ import PortSection from '../components/PortSection'
 import GallerySection from '../components/GallerySection'
 import TouristSection from '../components/TouristSection'
 import Footer from '../components/Footer'
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
 
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+}) 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
 
 export const metadata = {
@@ -20,8 +27,15 @@ export const metadata = {
 export default function Home() {
   return (
    
-      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
-      <Navbar/>
+      <div className={`${roboto.variable} font-sans bg-white text-black `}>
+        <Head>
+<title>Montransfert-Transport & Logistique</title>
+</Head>
+
+        <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+        <Navbar/>
+        </div>
+      
       <HeroSection/>
       <ReserveTransport/>
       <ContactSection />
@@ -29,7 +43,10 @@ export default function Home() {
       <PortSection />
       <GallerySection />
       <TouristSection />
+      
       <Footer />
+      
+      
     </div>
     
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">

@@ -3,6 +3,14 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { Inconsolata} from "next/font/google";
 import Link from "next/link";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
 
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
@@ -62,8 +70,13 @@ export default function Reservation() {
             },
           ];
   return (
-   <div className={`${inconsolata.className} antialiased bg-white text-black`}>
-      <Navbar />
+   <div className={`${roboto.variable} font-sans bg-white text-black`}>
+       <Head>
+<title>Nos tarifs-Montransfert</title>
+</Head>
+      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+          <Navbar />
+          </div>
        <div className="bg-white">
       {/* Banner Section */}
       <div className="relative w-full h-[400px]">
@@ -115,8 +128,8 @@ export default function Reservation() {
                   {faq.title && (
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/40 text-white flex flex-col justify-center p-4 opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-in-out">
         <div className="transition-all duration-700 delay-200">
-            <h1 className="text-white text-4xl font-bold">{faq.type}</h1>
-        <span className="text-lg font-semibold text-[#deba91]"><span className=" align-super text-3xl text-[#deba91]">CHF</span> <span className=" font-bold text-5xl">{faq.title}</span><span className=" align-sub text-2xl"> /per {faq.time}</span></span>
+            <h1 className="text-white text-3xl font-bold mb-2">{faq.type}</h1>
+        <span className="text-lg font-semibold text-[#deba91]"><span className=" align-super text-2xl text-[#deba91]">CHF</span> <span className=" font-bold text-4xl">{faq.title}</span><span className=" align-sub text-2xl"> /per {faq.time}</span></span>
         </div>
       </div>
       )}

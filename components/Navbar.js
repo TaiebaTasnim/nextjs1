@@ -9,7 +9,7 @@ import { HiMenu, HiX } from "react-icons/hi"; // Import hamburger and close icon
 const navLinks = [
   { name: "Accueil", href: "/" },
   { name: "Nos services", href: "/Services" },
-  { name: "Location", href: "/Rental" },
+  { name: "Location", href: "/Location" },
   { name: "Transport Maritime", href: "/Maritime" },
   { name: "Tarif et réservation", href: "/Reservation" },
   { name: "À propos", href: "/About" },

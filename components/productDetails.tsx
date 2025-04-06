@@ -2,6 +2,15 @@ import Image from "next/image";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { Inconsolata} from "next/font/google";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
+
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
 
@@ -24,8 +33,13 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   }
 
   return (
-    <div className={`${inconsolata.className} antialiased bg-white text-black`}>
-      <Navbar/>
+    <div className={`${roboto.variable} font-sans bg-white text-black`}>
+      <Head>
+<title>{product.name}-Montransfert</title>
+</Head>
+      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+                <Navbar />
+                </div>
       <div className="max-w-7xl mx-auto w-[90%] py-16">
       <h1 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-8">Présentation du Mercedes Classe V</h1>
       <div className=" flex flex-col items-center ">

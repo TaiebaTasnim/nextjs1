@@ -6,6 +6,14 @@ import { FaCheck } from "react-icons/fa";
 import { useState } from "react";
 import Progressbar from "@/components/Progreebar";
 import Link from "next/link";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
 
 const inconsolata = Inconsolata({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-inconsolata" });
 
@@ -69,8 +77,13 @@ export default function Services() {
   };
   return (
    <div className="bg-white">
-    <div className={`${inconsolata.className} antialiased bg-white text-black `}>
-      <Navbar />
+    <Head>
+<title>Nos services-Montransfert</title>
+</Head>
+    <div className={`${roboto.variable} font-sans bg-white text-black`}>
+      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+          <Navbar />
+          </div>
        <div className="bg-white">
       {/* Banner Section */}
       <div className="relative w-full h-[400px]">
@@ -114,7 +127,7 @@ export default function Services() {
           Meilleurs services de transport
         </h2>
         {/* Subheading */}
-        <h3 className="text-2xl text-gray-700 font-semibold mb-6">
+        <h3 className="text-2xl text-[#deba91] font-semibold mb-6">
           Véhicules superbes
         </h3>
         {/* Description */}
@@ -141,6 +154,7 @@ export default function Services() {
         {/* Left Side - Text Content */}
         <div className="  rounded-lg">
         <h2 className="text-4xl font-bold text-black tracking-wide">
+        
         Nous nous soucions de <br /> votre confort et de votre sécurité
       </h2>
       {/* Subtitle */}
@@ -153,7 +167,7 @@ export default function Services() {
         pour offrir une expérience de voyage agréable et fiable.
       </p>
 
-      <Link href={""}>
+      <Link href={"/About"}>
       <button className="mt-6 px-10 py-4 border border-[#deba91] text-gray-700 transition-all relative overflow-hidden group ">
   {/* "+" transforms into a circle */}
   <span className="relative z-10 flex items-center gap-2">

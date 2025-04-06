@@ -5,6 +5,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Inconsolata } from "next/font/google";
 import Image from "next/image";
+import { Roboto } from 'next/font/google';
+import Head from "next/head";
+
+const roboto = Roboto({
+  subsets: ['latin'],       
+  weight: ['400', '700'],   
+  variable: '--font-roboto', 
+})
 
 const inconsolata = Inconsolata({
   subsets: ["latin"],
@@ -31,8 +39,13 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${inconsolata.className} antialiased bg-white text-black`}>
-      <Navbar />
+    <div className={`${roboto.variable} font-sans bg-white text-black`}>
+      <Head>
+<title>Contactez-Montransfert</title>
+</Head>
+      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+          <Navbar />
+          </div>
       <div className="">
         {/* Banner Section */}
               <div className="relative w-full h-[400px]">
@@ -64,7 +77,7 @@ export default function Contact() {
               Avez-vous besoin d&apos;une voiture ? <br />
               Contactez-nous
             </h2>
-            <p className="text-sm uppercase text-gray-500 tracking-widest mt-2">
+            <p className="text-sm uppercase text-[#deba91] tracking-widest mt-2">
               MEILLEURE LOCATION DE VOITURE
             </p>
             <p className="mt-4 text-lg text-gray-600">
@@ -108,18 +121,23 @@ export default function Contact() {
           {/* Right Side - Google Map & Contact Form */}
           <div className="space-y-8">
             {/* Google Map */}
-            <iframe
+            <iframe 
+            className="w-full h-[250px] rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.0738154129194!2d6.6680034!3d46.5462266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c2e7d07aeff99%3A0xf5cb12f0a69c9ca8!2sRte%20de%20la%20Croix-Blanche%2C%201066%20Epalinges%2C%20Switzerland!5e0!3m2!1sen!2sbd!4v1743968395581!5m2!1sen!2sbd" allowFullScreen
+              loading="lazy"></iframe>
+            {/* <iframe
               className="w-full h-[250px] rounded-lg"
+              
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2765.041769072523!2d6.667920!3d46.543957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c30b7d27e6219%3A0x8e14c33e4e7d5d6d!2sRte%20de%20la%20Croix-Blanche%201066%2C%20Epalinges%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1640000000000"
               allowFullScreen
               loading="lazy"
-            ></iframe>
+            ></iframe> */}
 
             {/* Contact Form */}
             <div>
-              <h3 className="text-xl font-semibold text-black">Quick Contact:</h3>
+              <h3 className="text-xl font-semibold text-black">Contact rapide</h3>
               <div className="grid grid-cols-2 gap-4 mt-4">
-                {["email", "name", "phone", "message"].map((field, index) => (
+                {["email", "nom", "téléphone", "message"].map((field, index) => (
                   <div
                     key={index}
                     className={`relative ${field === "phone" || field === "message" ? "col-span-2" : ""}`}
@@ -127,7 +145,7 @@ export default function Contact() {
                     {field === "message" ? (
                       <textarea
                         name={field}
-                        placeholder={`Your ${field}`}
+                        placeholder={`Votre ${field}`}
                         value={formData[field]}
                         onChange={handleChange}
                         className="w-full py-2 border-b border-gray-200 focus:outline-none text-black transition-all duration-500 bg-gradient-to-r from-[#deba91] to-[#deba91] bg-[length:0%_2px] bg-no-repeat bg-bottom hover:bg-[length:100%_2px]"
@@ -151,7 +169,7 @@ export default function Contact() {
                 <span className="relative z-10 flex items-center gap-2">
                   <span className="transition-all duration-500 group-hover:scale-0 text-[#deba91] text-2xl">+</span>
                   <span className="absolute opacity-0 w-0 h-0 bg-[#deba91] rounded-full transition-all duration-200 group-hover:opacity-100 group-hover:w-3 group-hover:h-3"></span>
-                  <span className="text-lg">SEND</span>
+                  <span className="text-lg uppercase">Envoyer</span>
                 </span>
               </button>
               

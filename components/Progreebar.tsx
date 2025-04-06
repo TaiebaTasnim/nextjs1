@@ -35,7 +35,8 @@ export default function Progressbar() {
   }, []);
 
   return (
-    <section ref={ref} className="max-w-7xl mx-auto w-[90%] flex flex-col md:flex-row items-center gap-5 py-16 bg-white">
+    
+      <section ref={ref} className="max-w-7xl mx-auto w-[90%] flex flex-col md:flex-row items-center gap-5 py-16 bg-white">
       {/* Left: Images */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full  md:w-1/2">
        <Image
@@ -79,5 +80,8 @@ export default function Progressbar() {
         </div>
       </div>
     </section>
+
+    
+    
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Mail, PhoneCall } from "lucide-react";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+//import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,26 +17,26 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-white py-16 px-6 md:px-20 lg:px-40">
+    <section className="bg-white py-16  max-w-7xl mx-auto w-[90%]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Side */}
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold text-black">Do you need a car?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-black">Avez-vous besoin d&apos;une voiture ?</h2>
           <h3 className="text-sm tracking-widest text-[#deba91] mt-2">
-            THE BEST CAR RENTAL
+          LA MEILLEURE LOCATION DE VOITURES
           </h3>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            The best car rental offers quality service, well-maintained vehicles, and competitive rates.
-            Whether for a business trip, vacation, or a one-off need, a good rental agency guarantees comfort,
-            flexibility, and reliable assistance. With a wide selection of models, from city cars to luxury vehicles,
-            it adapts to the needs of each customer for a pleasant and worry-free experience. 🚗✨
+          La meilleure location de voitures offre un service de qualité, des véhicules bien entretenus et des tarifs compétitifs.
+Que ce soit pour un voyage d&apos;affaires, des vacances ou un besoin ponctuel, une bonne agence de location garantit confort,
+flexibilité et assistance fiable. Avec un large choix de modèles, des citadines aux véhicules de luxe, elle s&apos;adapte aux besoins
+de chaque client pour une expérience agréable et sans souci. 🚗✨
           </p>
 
           {/* Contact Details */}
           <div className="mt-6 flex flex-col space-y-2">
             <div className="flex items-center space-x-3">
               <PhoneCall className="text-[#deba91]" />
-              <p className="text-gray-800 text-lg">Phone: +41 79 576 39 79</p>
+              <p className="text-gray-800 text-lg">Tel: +41 79 576 39 79</p>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="text-[#deba91]" />
@@ -101,24 +101,7 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Floating Icons */}
-      <div className="fixed bottom-10 left-6 flex flex-col space-y-4">
-      <a
-              href="https://wa.me/41795763979"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 bg-green-500 text-white flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition"
-            >
-              <FaWhatsapp className="text-2xl" />
-            </a>
-            <a
-              href="tel:+41795763979"
-              className="w-10 h-10 bg-green-700 text-white flex items-center justify-center rounded-full shadow-lg hover:bg-green-800 transition"
-            >
-              <FaPhoneAlt className="text-xl" />
-            </a>
-        
-      </div>
+      
     </section>
   );
 }

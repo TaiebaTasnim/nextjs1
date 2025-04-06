@@ -35,7 +35,7 @@ export default function Progressbar() {
   }, []);
 
   return (
-    <section ref={ref} className="flex flex-col md:flex-row items-center px-8 py-16 bg-white">
+    <section ref={ref} className="max-w-7xl mx-auto w-[90%] flex flex-col md:flex-row items-center gap-5 py-16 bg-white">
       {/* Left: Images */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full  md:w-1/2">
        <Image
@@ -61,11 +61,11 @@ export default function Progressbar() {
 
       {/* Right: Text & Progress Bars */}
       <div className="w-full md:w-1/2 mt-10 md:mt-0">
-        <h2 className="text-3xl font-bold text-black mb-6">Le service dont vous avez besoin</h2>
+        <h2 className="text-xl lg:text-3xl font-bold text-black mb-6">Le service dont vous avez besoin</h2>
         <div className="space-y-4">
           {services.map((service, index) => (
             <div key={index}>
-              <div className="flex justify-between text-sm font-semibold">
+              <div className="flex justify-between text-black text-sm font-semibold">
                 <span>{service.name}</span>
                 <span>{service.value}%</span>
               </div>

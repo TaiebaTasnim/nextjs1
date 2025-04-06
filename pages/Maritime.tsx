@@ -29,45 +29,46 @@ export default function Maritime() {
 
         {/* Title Text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <h1 className="text-5xl font-bold">Maritime Excellence</h1>
-          <p className="mt-4 text-lg">
-            Navigating the future of ocean transport with precision and reliability.
-          </p>
+          <h1 className="text-5xl font-bold">Excellence maritime</h1>
+          {/* <p className="mt-4 text-lg">
+          Naviguer vers l&apos;avenir du transport maritime avec précision et fiabilité.
+          </p> */}
         </div>
       </div>
 
       {/* Transport Group */}
-      <div className="mt-20 container mx-auto">
+      <div className="mt-20 max-w-7xl mx-auto w-[90%]">
         <h2 className="text-4xl text-center font-semibold text-black mb-10">
           Transport Maritime et Groupage
         </h2>
 
         <div className="relative w-full h-[500px]">
           <Image
-            src="/images/teslaY1.jpg"
+            src="/images/port2.jpg"
             alt="Transport 1"
             fill
+            quality={100}
             className="object-cover rounded-lg"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-            <h2 className="text-5xl font-bold">Fast & Reliable Transport</h2>
-            <p className="text-lg">Ensuring secure & efficient delivery</p>
+            <h2 className="text-5xl font-bold text-center">Transport Maritime et Groupage</h2>
+            <p className="text-lg text-center">Lausanne-Dakar</p>
           </div>
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto mt-6">
-        <h2 className="text-4xl text-left font-semibold text-black">
+      <div className=" mt-6 text-center">
+        <h2 className="text-4xl  font-semibold text-black">
           Montransfert Sàrl, 1066 Lausanne
         </h2>
-        <h2 className="text-lg text-left uppercase font-semibold text-[#deba91] pb-10">
+        <h2 className="text-lg  uppercase font-semibold text-[#deba91] pb-10">
           Contactez-nous pour avoir plus de renseignements
         </h2>
       </div>
 
-      <hr className="border border-[#deba91]" />
+      {/* <hr className="border border-[#deba91]" /> */}
     </div>
     <Footer />
    </div>

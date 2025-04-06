@@ -26,7 +26,7 @@ export default function HeroSection() {
 
   return (
      <div className="bg-white">
-       <div className="relative w-full container mx-auto h-[500px] overflow-hidden">
+       <div className="relative  max-w-7xl mx-auto h-[500px] overflow-hidden w-[90%]">
       {/* Background Image Slider */}
       <div className="absolute inset-0 w-full h-full">
         {images.map((src, index) => (

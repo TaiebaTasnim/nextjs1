@@ -33,7 +33,30 @@ export default function Contact() {
   return (
     <div className={`${inconsolata.className} antialiased bg-white text-black`}>
       <Navbar />
-      <div className="container mx-auto px-6 py-16">
+      <div className="">
+        {/* Banner Section */}
+              <div className="relative w-full h-[400px]">
+                {/* Background Image */}
+                <Image
+                  src="/images/gallery3.jpg"
+                  alt="car rental"
+                  fill
+                  className="object-cover"
+                  quality={100}
+                />
+        
+                {/* Overlay for better text visibility */}
+                <div className="absolute inset-0 bg-black/60"></div>
+        
+                {/* Title Text */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+                  <h1 className="text-5xl font-bold">Contactez-nous</h1>
+                  {/* <p className="mt-4 text-lg">
+                  Découvrez notre engagement à fournir des solutions de transport fiables et sans faille pour tous vos besoins de voyage.
+                  </p> */}
+                </div>
+              </div>
+        <div className="max-w-7xl mx-auto w-[90%] pt-18">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left Side - Contact Information */}
           <div>
@@ -70,7 +93,7 @@ export default function Contact() {
               <div className="flex items-center space-x-3 gap-6">
               <Image src='/images/icon2.png' alt="Logo" width={30}
            height={30}  />
-                <p className="text-lg text-black w-[30%]">
+                <p className="text-lg text-black w-full lg:w-[30%]">
                   Route de la Croix-Blanche 1066, Epalinges, Suisse
                 </p>
               </div>
@@ -134,6 +157,7 @@ export default function Contact() {
               
             </div>
           </div>
+        </div>
         </div>
       </div>
       <Footer />

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const TransportSection = () => {
   return (
-    <section className="py-16 px-8 bg-white">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section className="py-16  bg-white max-w-7xl mx-auto w-[90%]">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Image 1 */}
         <div className="relative w-full h-72">
           <Image 

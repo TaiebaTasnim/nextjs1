@@ -19,7 +19,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className={`${inconsolata.className} antialiased bg-white text-black`}>
+   
+      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
       <Navbar/>
       <HeroSection/>
       <ReserveTransport/>
@@ -30,6 +31,7 @@ export default function Home() {
       <TouristSection />
       <Footer />
     </div>
+    
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
     //   <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
     //     <Image

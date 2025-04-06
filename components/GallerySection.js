@@ -14,10 +14,10 @@ const images = [
 const GallerySection = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto w-[90%] py-16">
       {/* Section Title */}
       <h2 className="text-center text-3xl font-semibold text-[#B59C78] mb-6">
-        Gallery
+      Galerie
       </h2>
 
       {/* Grid Layout */}

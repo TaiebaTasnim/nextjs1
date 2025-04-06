@@ -9,8 +9,8 @@ export default function ReserveTransport() {
   const [time, setTime] = useState(null);
 
   return (
-    <div className="flex flex-col md:flex-row p-6 bg-white">
-      <div className="w-full md:w-1/2 p-4 bg-white shadow-lg rounded-lg">
+    <div className="flex flex-col md:flex-row py-16  bg-white max-w-7xl mx-auto w-[90%]">
+      <div className="w-full md:w-1/2  bg-white shadow-lg rounded-lg">
         <h2 className="text-lg font-bold text-blue-900 mb-4">Détails De Votre Trajet</h2>
         <div className="space-y-4">
           <div className="flex items-center border rounded-lg px-3 py-2">

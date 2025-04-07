@@ -1,6 +1,6 @@
-
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion"; // Import motion from framer-motion
+import Image from "next/image";
 
 const services = [
   { name: "PROFESSIONNEL", value: 95 },
@@ -35,29 +35,25 @@ export default function Progressbar() {
   }, []);
 
   return (
-    
-      <section ref={ref} className="max-w-7xl mx-auto w-[90%] flex flex-col md:flex-row items-center gap-5 py-16 bg-white">
+    <section ref={ref} className="max-w-7xl mx-auto w-[90%] flex flex-col md:flex-row items-center gap-5 py-16 bg-white">
       {/* Left: Images */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full  md:w-1/2">
-       <Image
-                 src="/images/service1.jpg"
-                 alt="car rental"
-                 width={300}
-                 height={300}
-                 
-                 className="object-cover"
-                 quality={100}
-               />
-       
         <Image
-                  src="/images/service2.jpg"
-                  alt="car rental"
-                  width={300}
-                  height={300}
-                  className="object-cover"
-                  quality={100}
-                />
-        
+          src="/images/service1.jpg"
+          alt="car rental"
+          width={300}
+          height={300}
+          className="object-cover"
+          quality={100}
+        />
+        <Image
+          src="/images/service2.jpg"
+          alt="car rental"
+          width={300}
+          height={300}
+          className="object-cover"
+          quality={100}
+        />
       </div>
 
       {/* Right: Text & Progress Bars */}
@@ -70,18 +66,26 @@ export default function Progressbar() {
                 <span>{service.name}</span>
                 <span>{service.value}%</span>
               </div>
-              <progress
-                className="progress  w-full text-[#deba91] transition-all duration-1000"
-                value={visible ? service.value : 0}
-                max="100"
-              ></progress>
+
+              {/* Using motion.div for smooth width animation */}
+              <motion.div
+                className="progress w-full"
+                style={{ height: "8px", backgroundColor: "#f0f0f0", borderRadius: "10px" }}
+                initial={{ width: 0 }} // Start at 0 width
+                animate={{ width: visible ? `${service.value}%` : "0%" }} // Animate width based on visibility
+                transition={{ duration: 1.5, ease: "easeOut" }} // Animation duration and easing
+              >
+                <motion.div
+                  className="bg-[#deba91] h-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: visible ? `${service.value}%` : "0%" }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                />
+              </motion.div>
             </div>
           ))}
         </div>
       </div>
     </section>
-
-    
-    
   );
 }

@@ -3,22 +3,22 @@
 import { useState, ChangeEvent } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Inconsolata } from "next/font/google";
+//import { Inconsolata } from "next/font/google";
 import Image from "next/image";
-import { Roboto } from 'next/font/google';
+//import { Roboto } from 'next/font/google';
 import Head from "next/head";
 
-const roboto = Roboto({
-  subsets: ['latin'],       
-  weight: ['400', '700'],   
-  variable: '--font-roboto', 
-})
+// const roboto = Roboto({
+//   subsets: ['latin'],       
+//   weight: ['400', '700'],   
+//   variable: '--font-roboto', 
+// })
 
-const inconsolata = Inconsolata({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-inconsolata",
-});
+// const inconsolata = Inconsolata({
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+//   variable: "--font-inconsolata",
+// });
 
 export default function Contact() {
       const [formData, setFormData] = useState<{
@@ -39,13 +39,13 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${roboto.variable} font-sans bg-white text-black`}>
+    <div className="bg-white text-black">
       <Head>
 <title>Contactez-Montransfert</title>
 </Head>
-      <div className={`${inconsolata.className} antialiased bg-white text-black `}>
+      
           <Navbar />
-          </div>
+          
       <div className="">
         {/* Banner Section */}
               <div className="relative w-full h-[400px]">

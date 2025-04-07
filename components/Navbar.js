@@ -22,12 +22,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State for hamburger menu
 
   return (
-    <nav className="w-full bg-white">
+    <nav className="navbar w-full bg-white">
       <div className="max-w-7xl mx-auto w-[90%] flex items-center justify-between ">
         {/* Logo */}
-        <div className="w-[110px] h-[110px] mt-6">
+        <div className="w-[105px] h-[105px] mt-6">
           <Link href="/">
-            <Image src="/images/logo350.png" alt="Logo" width={110} height={110} className="cursor-pointer" />
+            <Image src="/images/logo350.png" alt="Logo" width={105} height={105} className="cursor-pointer" />
           </Link>
         </div>
 

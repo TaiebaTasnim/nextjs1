@@ -6,6 +6,19 @@
   --foreground: #171717;
 }
 
+:root {
+  --font-navbar: "Inconsolata", monospace;
+  --font-body: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-body)!important; /* Roboto for the whole website */
+}
+
+.navbar {
+  font-family: var(--font-navbar); /* Inconsolata for the Navbar */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

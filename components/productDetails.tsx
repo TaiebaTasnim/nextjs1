@@ -40,7 +40,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       <div className={`${inconsolata.className} antialiased bg-white text-black `}>
                 <Navbar />
                 </div>
-      <div className="max-w-7xl mx-auto w-[90%] py-16">
+      <div className="max-w-7xl mx-auto w-[90%] pt-5 pb-16">
       <h1 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-8">Présentation du Mercedes Classe V</h1>
       <div className=" flex flex-col items-center ">
       {/* Product Container */}

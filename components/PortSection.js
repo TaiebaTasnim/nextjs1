@@ -18,8 +18,9 @@ const TransportSection = () => {
           />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-x-0 bottom-5 flex flex-col items-center text-white">
-            <h2 className="text-2xl font-bold">Fast & Reliable Transport</h2>
-            <p className="text-lg">Ensuring secure & efficient delivery</p>
+            <h2 className="text-3xl font-bold text-red-700">Aéroport transfert</h2>
+            <p className="text-lg">Lausanne-Genève Aéroport</p>
+            <p className="text-lg">Lausanne-Zurich Aéroport</p>
           </div>
         </div>
 
@@ -34,8 +35,8 @@ const TransportSection = () => {
           />
            <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-x-0 bottom-5 flex flex-col items-center text-white">
-            <h2 className="text-2xl font-bold">Eco-Friendly Solutions</h2>
-            <p className="text-lg">Sustainable & Green Transportation</p>
+            <h2 className="text-2xl font-bold">Transport Maritime et Groupage</h2>
+            <p className="text-lg">Lausanne-Dakar</p>
           </div>
         </div>
       </div>

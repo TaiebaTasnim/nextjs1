@@ -107,7 +107,7 @@ export default function Reservation() {
             Limousine de luxe pour
             une satisfaction maximale. Profitez-en.
             </h2>
-            <p className="text-center text-xl font-semibold text-[#B59C78] mb-6">voitures exclusives</p>
+            <p className="text-center text-xl tracking-widest text-[#B59C78] mb-6">voitures exclusives</p>
       
             {/* Grid Layout */}
             
@@ -159,8 +159,8 @@ export default function Reservation() {
       <div className="relative z-10 text-center px-6 md:px-12">
         <h2 className="text-3xl md:text-5xl font-bold w-[70%] mx-auto">Économisez de l&apos;argent
         avec notre location</h2>
-        <p className="mt-4 text-lg max-w-2xl mx-auto ">
-        Tél: +41 79 576 39 79;
+        <p className="mt-4 text-xl max-w-2xl font-semibold mx-auto text-[#deba91]">
+        Tél: +41 79 576 39 79
         </p>
       </div>
     </div>

@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Transport Maritime", href: "/Maritime" },
   { name: "Tarif et réservation", href: "/Reservation" },
   { name: "À propos", href: "/About" },
-  { name: "CONTACT", href: "/Contact" },
+  { name: "Contact", href: "/Contact" },
 ];
 
 export default function Navbar() {

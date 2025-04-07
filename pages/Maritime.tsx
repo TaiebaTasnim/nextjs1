@@ -78,7 +78,7 @@ export default function Maritime() {
         <h2 className="text-4xl  font-semibold text-black mb-3">
           Montransfert Sàrl, 1066 Lausanne
         </h2>
-        <h2 className="text-lg  uppercase font-semibold text-[#deba91] pb-2">
+        <h2 className="text-lg  uppercase tracking-widest text-[#deba91] pb-2">
           Contactez-nous pour avoir plus de renseignements
         </h2>
         <a href="https://www.facebook.com/people/Transport-Maritime-et-Groupage-pour-le-S%C3%A9n%C3%A9gal-depuis-la-Suisse/61560718967371/" target="blank"><FaFacebookSquare className=" max-w-7xl mx-auto w-[90%] text-blue-900 text-4xl "></FaFacebookSquare></a>

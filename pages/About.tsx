@@ -50,7 +50,7 @@ export default function About() {
   <div className="max-w-7xl mx-auto w-[90%]">
     <div className="text-center mb-12">
       <h2 className="text-3xl font-semibold text-gray-800">Nos Services</h2>
-      <p className="mt-4 text-lg text-gray-600">Découvrez pourquoi nos véhicules sont le choix idéal pour vos déplacements.</p>
+      <p className="mt-3 text-lg text-[#deba91] tracking-widest w-[40%] mx-auto">Découvrez pourquoi nos véhicules sont le choix idéal pour vos déplacements.</p>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

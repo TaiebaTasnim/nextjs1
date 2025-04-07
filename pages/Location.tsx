@@ -52,7 +52,7 @@ export default function Rental() {
         <h2 className="text-4xl text-center font-semibold text-black mb-2">
         Une grande variété d&apos;options
         </h2>
-        <h2 className="text-lg text-center uppercase font-semibold text-[#deba91] mb-6">
+        <h2 className="text-lg text-center uppercase tracking-widest text-[#deba91] mb-6">
         Les meilleures possibilités
         </h2>
 
@@ -72,7 +72,7 @@ export default function Rental() {
           <h2 className="text-2xl text-center font-semibold text-black">
             Hybrid Toyota Auris Touring Hybrid
           </h2>
-          <h2 className="text-lg text-center uppercase font-semibold text-[#deba91] pb-10">
+          <h2 className="text-[16px] text-center uppercase tracking-widest text-[#deba91] pb-10">
             Contact us for a free quote
           </h2>
         </div>
@@ -91,7 +91,7 @@ export default function Rental() {
 
         <div className="mt-6">
           <h2 className="text-2xl text-center font-semibold text-black">Van</h2>
-          <h2 className="text-lg text-center uppercase font-semibold text-[#deba91] pb-10">
+          <h2 className="text-[16px] text-center uppercase tracking-widest text-[#deba91] pb-10">
             Contact us for a free quote
           </h2>
         </div>

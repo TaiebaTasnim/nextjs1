@@ -127,7 +127,7 @@ export default function Services() {
           Meilleurs services de transport
         </h2>
         {/* Subheading */}
-        <h3 className="text-2xl text-[#deba91] font-semibold mb-6">
+        <h3 className="text-lg text-[#deba91] tracking-widest mb-6">
           Véhicules superbes
         </h3>
         {/* Description */}
@@ -158,7 +158,7 @@ export default function Services() {
         Nous nous soucions de <br /> votre confort et de votre sécurité
       </h2>
       {/* Subtitle */}
-      <h3 className="text-2xl text-[#deba91] font-semibold mt-4">
+      <h3 className="text-lg text-[#deba91] tracking-widest mt-4">
         Meilleurs conducteurs
       </h3>
       {/* Paragraph */}
@@ -285,7 +285,7 @@ export default function Services() {
     <h2 className="text-center  text-3xl font-semibold  mb-2">
     Large sélection de véhicules
             </h2>
-            <p className="text-center text-xl uppercase font-semibold text-[#B59C78] mb-6">Profitez du trajet</p>
+            <p className="text-center text-xl uppercase tracking-widest font-medium text-[#deba91] mb-6">Profitez du trajet</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             {faqs.map((faq, index) => (
@@ -295,9 +295,9 @@ export default function Services() {
                   <span className="text-[#deba91] text-xl">{activeIndex === index ? "−" : "+"}</span>
                 </button>
                 {activeIndex === index && (
-                  <div>
-                    <p className="mt-2 text-gray-600">{faq.answer}</p>
-                    <span className="text-lg font-semibold text-[#deba91]"><span className=" align-super text-3xl text-[#deba91]">CHF</span> <span className=" font-bold text-5xl">{faq.title}</span><span className=" align-sub text-2xl"> /per {faq.time}</span></span>
+                  <div className="">
+                    <p className="mt-2 text-gray-600 mb-5">{faq.answer}</p>
+                    <span className="text-lg font-semibold text-[#deba91] "><span className=" align-super text-2xl text-[#deba91]">CHF</span> <span className=" font-bold text-4xl">{faq.title}</span><span className=" align-sub text-2xl"> /per {faq.time}</span></span>
                   </div>
                 )}
               </div>
